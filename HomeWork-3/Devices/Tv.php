@@ -6,10 +6,13 @@ namespace Devices;
 class Tv extends Device implements TvInterface
 {
     public $parametrListOfTv = array();
-    private $volume = 10;
-    private $chanel = 5;
-    private $status = false;
+    private $volume;
+    private $chanel;
 
+    public function __construct($vol, $cha){
+        $this->volume = $vol;
+        $this->chanel = $cha;
+    }
     public function checkNextChanel()
     {
         $this->chanel+=1;
