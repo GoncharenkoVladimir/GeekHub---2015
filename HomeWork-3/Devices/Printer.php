@@ -3,7 +3,11 @@
 namespace Devices;
 
 
-class Printer
+class Printer extends Device
 {
     public $parametrListOfPrinter = array();
+
+    public function showPage(){
+        echo "This page print all printers<br>";
+    }
 }

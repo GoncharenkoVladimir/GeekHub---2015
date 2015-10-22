@@ -10,6 +10,17 @@
         vertical-align: middle;
         border: 1px solid black;
     }
+    #display_tv{
+        background-color: cyan;
+        color: #dd4444;
+        font-size: 18px;
+        font-weight: 600;
+        width: 320px;
+        height: 200px;
+    }
+    p{
+        margin: 0;
+    }
 </style>
 <?php
     require_once 'vendor/autoload.php';
@@ -23,41 +34,46 @@
     $dev->parametrListOfDevices['Brand'] = "Samsung";
     $dev->parametrListOfDevices['model'] = "XD-101";
     echo 'Device: '.$dev->parametrListOfDevices['Brand'].' '.$dev->parametrListOfDevices['model']."<br>\n";
+    $dev->showPage();
 
     $mob = new MobileTelefone();
     $mob->parametrListOfMobiles['Brand'] = "Nokia";
     $mob->parametrListOfMobiles['model'] = "Lumia 900";
     echo 'Mobile telephone: '.$mob->parametrListOfMobiles['Brand'].' '.$mob->parametrListOfMobiles['model']."<br>\n";
+    $mob->showPage();
 
     $tv = new Tv();
     $tv->parametrListOfTv['Brand'] = "Philips";
     $tv->parametrListOfTv['model'] = "B-350";
     echo 'TV: '.$tv->parametrListOfTv['Brand'].' '.$tv->parametrListOfTv['model']."<br>\n";
+    $tv->showPage();
 
 ?>
 <div>
     <h5>Tv Interface</h5>
-    <span class="button" onclick="document.write('<?php $tv->checkNextChanel(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->checkNextChanel(); ?></p>'">
         NEXT
     </span>
-    <span class="button" onclick="document.write('<?php $tv->checkPrevChanel(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->checkPrevChanel(); ?></p>'">
         PREV
     </span>
-    <span class="button" onclick="document.write('<?php $tv->onTv(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->onTv(); ?></p>'">
         ON
     </span>
-    <span class="button" onclick="document.write('<?php $tv->offTv(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->offTv(); ?></p>'">
         OFF
     </span>
-    <span class="button" onclick="document.write('<?php $tv->upVolume(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->upVolume(); ?></p>'">
         VOLUME +
     </span>
-    <span class="button" onclick="document.write('<?php $tv->downVolume(); ?>');">
+    <span class="button" onclick="document.getElementById('display_tv').innerHTML='<p><?php $tv->downVolume(); ?></p>'">
         VOLUME -
     </span>
+    <div id="display_tv"></div>
 </div>
 <?php
     $prt = new Printer();
     $prt->parametrListOfPrinter['Brand'] = "Xerox";
     $prt->parametrListOfPrinter['model'] = "B-350";
     echo 'Printer: '.$prt->parametrListOfPrinter['Brand'].' '.$prt->parametrListOfPrinter['model']."<br>\n";
+    $prt->showPage();

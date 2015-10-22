@@ -46,5 +46,7 @@ class Tv extends Device implements TvInterface
         echo 'TV off!!!';
     }
 
-
+    public function showPage(){
+        echo "This page showing in TV devices<br>";
+    }
 }
