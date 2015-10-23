@@ -1,0 +1,16 @@
+{
+  "name": "geekhub2015/Homeworc-3",
+      "description": "Our devices",
+      "authors": [
+          {
+            "name": "Vladimir Goncharenko",
+            "email": "kragen1988@gmail.com"
+        }
+    ],
+  "require": { },
+  "autoload":{
+      "psr-4": {
+          "Devices\\": "Devices"
+      }
+  }
+}
