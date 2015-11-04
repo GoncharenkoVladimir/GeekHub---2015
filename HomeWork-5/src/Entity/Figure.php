@@ -14,12 +14,12 @@ class Figure extends AbstractFigure
     private $squareFigure;
     private $perimeterFigure;
 
-    public function calcSquareFigure()
+    public function calcSquareFigure($a, $b, $c)
     {
         return $this->squareFigure;
     }
 
-    public function calcPerimeterFigure()
+    public function calcPerimeterFigure($a, $b, $c)
     {
         return $this->perimeterFigure;
     }

@@ -7,22 +7,17 @@ class Triangle extends Figure
 {
     private $squareFigure;
     private $perimeterFigure;
-    private $a, $b, $c;
 
-    public function __construct($a, $b, $c)
+    public function calcSquareFigure($a, $b, $c)
     {
-        $this->a = $a;
-        $this->b = $b;
-        $this->c = $c;
-    }
-    public function calcSquareFigure()
-    {
+        $p = $this->perimeterFigure/2;
+        $this->squareFigure = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
         return $this->squareFigure;
     }
 
-    public function calcPerimeterFigure()
+    public function calcPerimeterFigure($a, $b, $c)
     {
-        $this->perimeterFigure = $this->a + $this->b + $this->c;
+        $this->perimeterFigure = $a + $b + $c;
         return $this->perimeterFigure;
     }
 }

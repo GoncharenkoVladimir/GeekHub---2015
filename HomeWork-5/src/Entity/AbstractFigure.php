@@ -11,6 +11,6 @@ namespace Entity;
 
 abstract class AbstractFigure
 {
-    abstract public function calcSquareFigure ();
-    abstract public function calcPerimeterFigure ();
+    abstract public function calcSquareFigure ($a, $b, $c);
+    abstract public function calcPerimeterFigure ($a, $b, $c);
 }
