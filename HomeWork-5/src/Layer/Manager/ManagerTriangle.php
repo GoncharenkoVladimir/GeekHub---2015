@@ -19,6 +19,10 @@ class ManagerTriangle implements ManagerInterface
         $this->dbh = $dbh;
     }
 
+    /**
+     * @param $dbh
+     * @return bool
+     */
     public function list_tables($dbh)
     {
         $sql = 'SHOW TABLES';
@@ -44,7 +48,6 @@ class ManagerTriangle implements ManagerInterface
                                     )';
                 $dbh->query($sqlCreateTable);
             }
-
         }
         return FALSE;
     }
