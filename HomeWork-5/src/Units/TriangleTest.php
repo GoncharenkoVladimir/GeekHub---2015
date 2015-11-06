@@ -15,7 +15,10 @@ class TriangleTest extends PHPUnit_Framework_TestCase
     public function testCalcPerimeterFigure($ex, $a, $b, $c)
     {
         $tri = new Triangle();
-        $this->assertEquals($ex, $tri->calcPerimeterFigure($a, $b, $c));
+        $tri->setA($a);
+        $tri->setB($b);
+        $tri->setC($c);
+        $this->assertEquals($ex, $tri->calcPerimeterFigure());
     }
 
     /**
@@ -28,8 +31,11 @@ class TriangleTest extends PHPUnit_Framework_TestCase
     public function testCalcSquareFigure($ex, $a, $b, $c)
     {
         $tri = new Triangle();
-        $tri->calcPerimeterFigure($a, $b, $c);
-        $this->assertEquals($ex, $tri->calcSquareFigure($a, $b, $c));
+        $tri->setA($a);
+        $tri->setB($b);
+        $tri->setC($c);
+        $tri->calcPerimeterFigure();
+        $this->assertEquals($ex, $tri->calcSquareFigure());
     }
 
     public function calcPerimeterFigureProvider()

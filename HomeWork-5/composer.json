@@ -7,7 +7,11 @@
             "email": "kragen1988@gmail.com"
         }
     ],
-    "require": {},
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.0",
+        "ext-mysqlnd": "*"
+    },
     "require-dev": {
         "phpunit/phpunit":"5.0.*"
     },
