@@ -31,5 +31,4 @@ class MyConnect implements ConnectorInterface
     {
         // TODO: Implement connectClose() method.
     }
-
 }
