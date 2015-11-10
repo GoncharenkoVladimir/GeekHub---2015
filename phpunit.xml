@@ -6,10 +6,10 @@
         processIsolation            = "false"
         stopOnFailure               = "false"
         syntaxCheck                 = "false"
-        bootstrap                   = "vendor/autoload.php">
+        bootstrap                   = "HomeWork-5/vendor/autoload.php">
     <testsuites>
         <testsuite name="main">
-            <directory>src/Units</directory>
+            <directory>HomeWork-5/src/Units</directory>
         </testsuite>
     </testsuites>
 </phpunit>
